@@ -34,20 +34,26 @@ public class Account extends BaseEntity {
     @Column(nullable = false)
     private int income;
 
+    //지출 카테고리
+    private String epCategory;
+
+    //수입 카테고리
+    private String icCategory;
+
+
+
     //권한부여
 
     //지출 유형
     @Enumerated(EnumType.STRING)
     private EpType epType;
 
-    //지출 카테고리
-    @Enumerated(EnumType.STRING)
-    private EpCategory epCategory;
-
-    //수입 카테고리
-    @Enumerated(EnumType.STRING)
-    private IcCategory icCategory;
 
 
+
+    //회원정보 연결
+    @ManyToOne
+    @JoinColumn(name = "user_id") //매핑할 외래키 지정
+    private User user_id;
 
 }

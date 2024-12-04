@@ -48,4 +48,9 @@ public class Assets extends BaseEntity {
     //결제일
     private int acDay;
 
+    //회원정보 연결
+    @ManyToOne
+    @JoinColumn(name = "user_id") //매핑할 외래키 지정
+    private User user_id;
+
 }

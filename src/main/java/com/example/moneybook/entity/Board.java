@@ -33,4 +33,9 @@ public class Board extends BaseEntity {
     private String gole;
 
 
+    //회원정보 연결
+    @ManyToOne
+    @JoinColumn(name = "user_id") //매핑할 외래키 지정
+    private User user_id;
+
 }

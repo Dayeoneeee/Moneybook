@@ -4,6 +4,7 @@ import com.example.moneybook.entity.base.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
+@Entity
 @Getter
 @Setter
 @ToString
